@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Games</title>
+</head>
+<body>
+<h2>Game List</h2>
+<ul>
+    <li th:each="game : ${games}">
+        <span th:text="${game.name} ?: 'N/A'"></span>
+    </li>
+    <li th:each="game : ${games}">
+        <span th:text="${game.genre} ?: 'N/A'"></span>
+    </li>
+    <li th:each="game : ${games}">
+        <span th:text="${game.yearRelease} ?: 'N/A'"></span>
+    </li>
+    <li th:each="game : ${games}">
+        <span th:text="${game.costs} ?: 'N/A'"></span>
+    </li>
+</ul>
+</body>
+</html>
